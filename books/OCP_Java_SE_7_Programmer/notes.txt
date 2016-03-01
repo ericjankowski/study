@@ -1,0 +1,59 @@
+OCA/OCP Java SE 7 Programmer 1 & 2 Study Guide (Exams 1Z0-803 & 1Z0-804)
+========================================================================
+
+Preface
+-------
+
+Dont skip the Appendices.  Appendix A in particular covers serialization.
+
+In Every Chapter
+	- Certification Objectives
+	- Exam Watch
+	- On the Job
+	- Exercises
+	- From the Classroom
+	- Certification Summary
+	- Two-Minute Drill
+	- Self Test - take the self tests after completing each chapter in order to reinforce what you've learned and become familiar with the structure of the exam questions
+
+
+Introduction
+------------
+
+Organization
+	- Practice Exams are abailable for download see Appendix C
+
+What this book is not
+	- Even the most experienced Java developers often clain that having to prepare for the certigication exam made them far more knowledgeable and well-rounded programmers than they would have been without the exam-driven studying.
+
+Some Pointers
+	1.  Re-read all the Two-Minute Drills, or have someone quiz you.
+	2.  Re-read all the Exam Watch notes.
+	3.  Re-take the Self Tests
+	4.  Complete the exercises
+	5.  Write lots of Java code
+		- Put away your IDE, crank up the command line, and write code!
+
+Introduction to the Material in the Book
+
+Who Cares About Certification?
+
+
+Chapter 1 - Declarations and Access Control
+-------------------------------------------
+
+Delcaring Interface Constants
+	- Interfaces can have constants
+	- They are ALWAYS public static final, but they don't have to be declared that way
+	- Any combination of the required, but implicit, modifiers is legal, as is using no modifiers at all
+
+Access Modifiers
+	- 4 access modifiers
+		- public
+		- protected
+		- default
+		- private
+
+Public Members
+
+Private Members
