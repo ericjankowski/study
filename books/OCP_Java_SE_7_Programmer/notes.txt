@@ -57,3 +57,89 @@ Access Modifiers
 Public Members
 
 Private Members
+	- private methods are not inherited by sub-classes.
+		- Therefore, they can not be overridden
+
+Protected and Default Members
+	- A default member may only be accessed if the class accessing the member belongs to the same package, whereas a protected member can be accessed (through inheritance) by a subclass even if the subclass is in a different package.
+	- Default and protected behavior differ only when we talk about subclasses.
+	- default = package
+	- protected = package + kids
+
+Protected Details
+	- subclass-outside-the-package - protected members are not visible to "neighbors" in the same package as the subclass
+
+Default Details
+	- subclasses outside the package do not inherit default members
+
+Any local variable declared with an access modifier will not compile
+
+Table: Determining access to class members
+
+Visibility									| Public 	| Protected 	| Default 	| Private
+----------------------------------------------------------------------------------------------
+From the same class 						| Yes		| Yes			| Yes		| Yes
+----------------------------------------------------------------------------------------------
+From any class in the same package 			| Yes		| Yes			| Yes		| No
+----------------------------------------------------------------------------------------------
+From a subclass in the same package 		| Yes		| Yes			| Yes		| No
+----------------------------------------------------------------------------------------------
+From a subclass outside the same package 	| Yes 		| Yes (inherit)	| No 		| No 	
+----------------------------------------------------------------------------------------------
+From any non-subclass outside the package 	| Yes		| No 			| No 		| No
+
+
+Nonaccess Member Modifiers
+
+Final Methods
+	- The final keyword prevents a method from being overridden in a subclass
+
+Final Arguments
+	- Method arguments are essentially the same as local variables
+	- A final method argument can not be modified within the method
+
+Abstract Methods
+
+Synchronized Methods
+	- The synchronized keyword indicates that a method can be accessed by only one thread at a time.
+
+Native Methods
+	- The native modifier indicates that a method is implemented in platform-dependent code, often in C.
+	- 'native' can be applied only to methods, not classes or variables
+	- The body of a native method must be a semicolon, indicating that the implementation is omitted
+
+Strictfp Methods
+	- strictfp can be applied to both classes and methods, not variables
+	- The strictfp modifier forces floating points and any floating-point operations to adhere to the IEEE 754 standard.
+	- With strictfp, you can predict how your floating points will behave regardless of the underlying platform the JVM is running on.
+	- A variable can never be declared strictfp
+
+Methods with Variable Argument Lists (var-args)
+	- Syntax
+		- Legal
+			- void doStuff(int... x){}
+			- void doStuff2(char c, int... x){}
+			- void doStuff2(Animal... animal){}
+		- Illegal
+			- void doStuff4(int x...){} 			//bad syntax
+			- void doStuff5(int... x, char... y)	//too many var-args
+			- void doStuff6(String... s, byte b)	//var-arg must be last
+
+Constructor Declarations
+	- Constructors never have a return type
+	- Syntax
+		- Legal
+			- Foo(){}
+			- private Foo(){}
+			- Foo(int x){}
+			- Foo(int x, int... y){}
+		- Illegal
+			- void Foo(){}			//this is a method, not a constructor
+			- Foo2(){}				//this is not a method or a constructor
+			- Foo(short s);			//this looks like an abstract method
+			- static Foo(float f){}	//constructors can not be static
+			- final Foo(long x){}	//constructors can not be final
+			- abstract Foo(char c)	//constructors can not be abstract
+			- Foo(int... x, int t)	//bad var-arg syntax
+
+
