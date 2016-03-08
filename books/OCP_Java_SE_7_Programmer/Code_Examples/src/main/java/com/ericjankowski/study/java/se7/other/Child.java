@@ -11,5 +11,12 @@ public class Child extends Parent{
     public static void main(String [] args){
         Child child = new Child();
         child.testIt();
+        
+        Parent p = new Parent();
+        
+        System.out.println("X in parent is " + p.x);
+        // This causes a compiler error because while Child can access
+        // the variable x through an inheritance relationship, it cannot
+        // access it through a reference call on a Parent object.
     }
 }

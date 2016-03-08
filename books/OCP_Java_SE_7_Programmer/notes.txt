@@ -142,4 +142,59 @@ Constructor Declarations
 			- abstract Foo(char c)	//constructors can not be abstract
 			- Foo(int... x, int t)	//bad var-arg syntax
 
+Variable Declarations
+	- Primitives - one of eight types: char, boolean, byte, short, int, long, double, float
+	- Reference variables - used to refer to an object
 
+Declaring Primitives and Primitive Ranges
+	- integer types from small to big
+		- byte 	(1 byte)
+		- short	(2 bytes)
+		- int 	(4 bytes)
+		- long	(8 bytes)
+	- doubles (8 bytes) are bigger than floats (4 bytes)
+	- all the number types are signed
+		- the leftmost bit (the most significant digit) is used to represent the sign
+		- the rest of the bits represent the value, using two's complement notation
+	- The char type contains a single, 16-bit Unicode character
+
+Declaring Reference Variables
+
+Instance Variables
+	- Instance variables are defined inside the class, but outside of any method
+	- Instance variables are initialized only when the class is instantiated
+
+Local (Automatic/Stack/Method) Variables
+	- Local variables are always ont the stack, not the heap.
+	- While the local variable is on the stack, if the variable is an object reference, the object itself will still be created on the heap.  There is no such thing as a stack object, only a stack variable.
+	- Unlike instance variables, local variables don't get default values.
+	- Use the 'this' keyword to increase readability and avoid name collision confusion
+
+Array Declarations
+	- Arrays will always be an object on the heap, even if the array is declared to hold primitive elements.
+	- There is not such thing as a primitive array, but you can make an array of primitives
+	- It is never legal to include the size of the array in its declaration
+		- int[5] scores;  // illegal, the JVM doesn't allocate space until you actually instantiate the array object.
+
+Final Variables
+	- Declaring a variable with the final keyword makes it impossible to reassign that variable once it has been initialized with an explicit value.
+	- A reference variable marked final can't ever be reassigned to refer to a different object, but the data withini the object can still be modified.
+	- There are no final objects, only final references
+
+Transient Variables
+	- When you mark a variable transient, you are telling the JVM to skip this variable when you attempt to serialize the object containing it.
+
+Volatile Variables
+	- The volatile midifier tells the JVM that a thread accessing the variable must always reconcile its own private copy of the variable with the master copy in memory.
+	- The volatile keyword can only be applied to instance variables
+
+Static Variable and Methods
+
+Declaring enums
+	- appeared in Java 5
+	- enums can not be declared in methods
+	- Syntax
+		- enum CoffeeSize { BIG, HUGE, OVERWHELMING };
+
+Declaring Constructors, Methods, and Variables in an enum
+		- CoffeSize cs = CoffeeSize.BIG;
