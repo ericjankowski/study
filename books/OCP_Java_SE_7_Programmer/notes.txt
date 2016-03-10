@@ -195,6 +195,7 @@ Declaring enums
 	- enums can not be declared in methods
 	- Syntax
 		- enum CoffeeSize { BIG, HUGE, OVERWHELMING };
+		- CoffeSize cs = CoffeeSize.BIG;
 
 Declaring Constructors, Methods, and Variables in an enum
-		- CoffeSize cs = CoffeeSize.BIG;
+	- Constant-specific class body - for when you want to override a particular method of the grander enum for a specific enum type

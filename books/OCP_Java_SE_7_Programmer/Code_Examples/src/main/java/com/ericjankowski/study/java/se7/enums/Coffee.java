@@ -1,7 +1,13 @@
 package com.ericjankowski.study.java.se7.enums;
 
 enum CoffeeSize {
-    BIG(8), HUGE(10), OVERWHELMING(16);
+    BIG(8), 
+    HUGE(10), 
+    OVERWHELMING(16){
+        public String getLidCode(){
+            return "A";
+        }
+    };
     
     private int ounces;
     
@@ -11,6 +17,10 @@ enum CoffeeSize {
     
     public int getOunces(){
         return ounces;
+    }
+    
+    public String getLidCode(){
+        return "B";
     }
     
 }
@@ -27,7 +37,7 @@ public class Coffee {
         System.out.println(drink1.size.getOunces());
         
         for(CoffeeSize cs: CoffeeSize.values()){
-            System.out.println(cs + " " + cs.getOunces());
+            System.out.println(cs + " " + cs.getOunces() + " " + cs.getLidCode());
         }
     }
 }
