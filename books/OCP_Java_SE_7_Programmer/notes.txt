@@ -199,3 +199,31 @@ Declaring enums
 
 Declaring Constructors, Methods, and Variables in an enum
 	- Constant-specific class body - for when you want to override a particular method of the grander enum for a specific enum type
+
+
+
+Chapter 2 - Object Orientation
+------------------------------
+
+Vocabulary
+	- inheritance
+	- polymorphism
+	- encapsulation
+	- coupling
+	- cohesion
+	- composition
+	- design patterns
+
+Encapsulation
+	- Encapsulation should promote flexibility and maintainability
+	- Public instance variables expose too much of your class's internal structure.
+		- This decreases the flexibility of the class to change later.
+	- Encapsulation gives you the ability to make changes in your implementation without breaking compatibility with clients.
+	- Hide implementation details behind a public programming interface.
+	- Tha advantage of getters and setters is that they provide the ability to change your mind later, go back and add more code to your methods without braking your API.
+	- Good OO design dictates that you should plan for the future.
+
+Inheritance and Polymorphism
+	- The two most common reasons to use inheritance are
+		- to promote code reuse
+		- to use polymorphism
