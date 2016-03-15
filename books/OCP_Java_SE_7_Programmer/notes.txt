@@ -227,3 +227,16 @@ Inheritance and Polymorphism
 	- The two most common reasons to use inheritance are
 		- to promote code reuse
 		- to use polymorphism
+
+Is-A and Has-A Relationships
+	Is-A
+		- Interface or Inheritance
+	Has-A
+		- Based on usage, rather than inheritance
+
+Polymorphism
+
+Overriding / Overloading
+
+Overridden Methods
+	- Overriding methods can not have a more restrictive access modifier than the method being overridden
