@@ -246,4 +246,6 @@ Invoking a Superclass Version of an Overridden Method
 	- super.super.overriddenMethod();  //illegal
 
 Overloaded Methods
+	- The choice of which overloaded method to call is NOT dynamically decided at runtime
+		- The reference type, not the object type, determines which overloaded method is invoked.
 
