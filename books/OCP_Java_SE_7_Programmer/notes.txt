@@ -248,4 +248,217 @@ Invoking a Superclass Version of an Overridden Method
 Overloaded Methods
 	- The choice of which overloaded method to call is NOT dynamically decided at runtime
 		- The reference type, not the object type, determines which overloaded method is invoked.
+	- The main method can be overloaded, but "the only main() with JVM superpowers" is the main(String[] args) method
 
+Casting
+	- Downcasting is explicitly trying to cast an object to a more specific object down the inheritance tree
+		- Example:
+
+		  Animal animal = new Dog();
+		  if (animal instanceof Dog){
+		  	Dog dog = (Dog) animal;
+		  }
+
+		 - Compiler is trusting that we know what we are doing.  
+		 	- If we screw it up a little, we might get a ClassCastException at runtime (Downcasting within an inheritance tree)
+		 	- If we screw it up a lot, will ge an inconvertible types compiler error (Casting to an unrelated object - not in the inheritance tree).
+
+	- Upcasting just works.  No need for the (Cast) operation.
+		- Example:
+
+		  Object object = new Animal();
+
+Implementing an Interface
+
+Legal Return Types
+
+Return Type Declarations
+
+Return Types on Overloaded Methods
+	Illegal:
+
+		public class Foo{
+			void go(){}
+		}
+		public class Bar extends Foo{
+			String go(){ 	// Not legal! Can't change only the returh type
+				return null;
+			}
+		}
+
+	Legal:
+		public class Foo{
+			void go(){}
+		}
+		public class Bar extends Foo{
+			String go(int i){}  // Legal, this is an overloaded method with a new return type, basically a totally new method
+		}
+
+Overriding and Return Types
+	"Covariant Return" example (legal):
+
+		class Alpha {
+			Alpha doStuff(char c){
+				return new Alpha();
+			}
+		}
+		class Beta extends Alpha {
+			Beta doStuff(char c){
+				return new Alpha();
+			}
+		}
+
+Returning a Value
+
+Constructors and Instantiation
+
+Constructor Basics
+	- Constructors do not have return types
+	- Constructors' names must exactly match the class name
+	- It is very common and desirable for a class to have a no-arg constructor
+	- Constructors can be overloaded
+
+Constructor Chaining
+	- Every constructor IMPLICITLY calls super() before executing it's body.
+
+Rules for Constructors
+	- Constructors can use any access modifier
+	- The constructor name must match the name of the class
+	- Constructors must not have a return type
+	- A method with a return type and the same name as the class is just a method.  It's not a constructor.
+	- The default constructor is always the no-arg constructor
+	- If a class has implemented a constructor with arguments, the compilier will not provide the default, no-arg constructor
+
+Determine Whether a Default Constructor Will Be Created
+	- If your immediate parent does not have a no-arg constructor, you must type in the call to super(), supplying the appropriate arguments.
+	- Constructors are not inherited
+
+Overloaded Constructors
+	- You can call static methods in a constructor
+	- A constructor can never have both a call to this() and super()
+
+Initialization Blocks
+	- static init block - runs once, when the class is first loaded
+	- instance init block - runs once every time a new instance is created, right after the call to super().
+	- If you have more than one block of any kind, order matters
+
+Static Variables and Methods
+
+Accessing Static Methods and Variables
+
+
+Chapter 3 - Assignments
+-----------------------
+
+Stack and Heap - Quick Review
+	- Instance variables and objects live on the heap.
+	- Local variables live on the stack
+
+Literals, Assignments, and Variables
+
+Literal Values for All Primitive Typers
+
+Integer Literals (longs also)
+	- 4 ways to represent integers - decimal (base 10), octal (base 8), hexadecimal (base 16), binary (base 2 - new feature in Java 7)
+	- Numeric Literal with Underscores
+		- You cannot use the underscore literal at the beginning or end of the literal
+	- Decimal Literals (base 10)
+	- Binary Literals (base 2)
+		- int b1 = 0B101010; // set b1 to binary 101010 (decimal 42)
+		- int b2 = 0b00011;  // set b2 to binary 11 (decimal 3)
+		- long b3 = 0b00011l;
+	- Octal Literals
+		- int o1 = 06;  // set o1 to octal 6 (decimal 6)
+		- int o2 = 011; // set o2 to octal 11 (decimal 9)
+	- Hexadecimal Literals
+		- int x1 = 0X0001;  // set x1 to hexadecimal 1 (decimal 1)
+		- int x2 = 0x7fffffff; //set x2 to hexadecimal 7fffffff (decimal 2147483647)
+
+Floating-point Literals
+	- defined as double (64 bits) by default.
+	- if you want a true floating point literal, you need the f/F suffix
+		- float f1 = 12.12f
+		- float f2 = 23.23F
+
+Boolean Literals
+	- Numbers CANNOT be used as boolean literals
+		- boolean b1 = 0; // results in a compiler error
+		- in x = 1; if (x) {} // results in a compiler error
+
+Character Literals
+	- A char literal is represented by a single character in single quotes
+		- char a = 'a';
+		- char b = '@';
+	- Unicode values are allowed
+		- char letterN = '\u004E'
+	- Characters are 16-bit unsigned integers under the hood, so you can use any integer literal as well.  Some expressions will need a cast
+
+String Literals
+
+Assignment Operators
+
+Primitive Assignments
+
+Primitive Casting
+
+Assigning Floating-point Numbers
+	- you have to be explicit with float literals
+		- float f = (float) 32.3;
+		- float g = 32.3f
+		- float h = 32.3F
+
+Assigning a Literal That is Too Large for the Variable
+
+Assigning One Primitive Variable to Another Primitive Variable
+
+Variable Scope
+
+Variable Initialization
+
+Using a Variable or Array Element That is Uninitialized and Unassigned
+
+Primitive and Object Tupe Instance Variables
+
+Primitive Instance Variables
+
+Object Reference Instance Variables
+
+Array Instance Variables
+
+Local Primitives and Objects
+	- must be initialized before use, otherwise the compiler errors out
+
+Local Object References
+
+Local Arrays
+
+Assigning One Reference Variable to Another
+	- Primitives are passed by value
+	- Objects are passed by reference
+	- Strings are a little more like primitives than objects
+
+Passing Variables int Methods
+
+Passing Object Reference Variables
+
+Passing Primitive Variables
+
+Garbage Collection
+
+Overview of Memory Management and Garbage Collection
+	- It is estimated that manual memory management can double the development effort for a complex program
+
+Overview of Java's Garbage Collector
+
+When does the garbage collector run?
+	- The JVM decides when to run the garbage collector
+	- Experience indicates that when your Java program makes a request for garbage collection, the JVM will usually grant your request in short order, but there are no guarantees
+
+How does the Garbage Collector Work?
+	- An object is eligible for garbage collection when no live thread can access it.
+
+Writing Code the Explicitly Makes Objects Eligible for Collection
+
+Nulling a Reference
+
+Reassigning a Reference Variable
