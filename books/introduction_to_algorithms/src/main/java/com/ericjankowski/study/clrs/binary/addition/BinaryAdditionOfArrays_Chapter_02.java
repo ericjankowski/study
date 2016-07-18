@@ -1,6 +1,6 @@
 package com.ericjankowski.study.clrs.binary.addition;
 
-import com.eridjankowski.study.utils.ArrayUtils;
+import com.ericjankowski.study.utils.ArrayUtils;
 
 public class BinaryAdditionOfArrays_Chapter_02 {
     public static void main(String[] args) {

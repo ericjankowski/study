@@ -1,4 +1,4 @@
-package com.eridjankowski.study.utils;
+package com.ericjankowski.study.utils;
 
 public class ArrayUtils {
     public static void print(int[] array){
