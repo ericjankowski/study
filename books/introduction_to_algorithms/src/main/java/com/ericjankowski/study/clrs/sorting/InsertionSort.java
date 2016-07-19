@@ -12,31 +12,16 @@ public class InsertionSort {
      * */
     public static void main(String[] args) {
         int[] array = {7,5,2,9,4,6,10,3,8,1};
-        sortAscending(array);
+        sort(array);
         ArrayUtils.print(array);
         test(array);
-        
-        sortDescending(array);
-        ArrayUtils.print(array);
     }
     
-    private static void sortAscending(int[] array){
+    private static void sort(int[] array){
         for(int j=1; j<array.length; j++){
             int key = array[j];
             int i = j-1;
             while(i>=0 && array[i] > key){
-                array[i +1] = array[i];
-                i = i-1;
-            }
-            array[i+1] = key;
-        }
-    }
-    
-    private static void sortDescending(int[] array){
-        for(int j=1; j<array.length; j++){
-            int key = array[j];
-            int i = j-1;
-            while(i>=0 && array[i] < key){
                 array[i +1] = array[i];
                 i = i-1;
             }

@@ -4,11 +4,10 @@ import com.ericjankowski.study.utils.ArrayUtils;
 
 public class MergeSort {
     public static void main(String[] args) {
-        int [] array = {4,10,8,1,2,5,3,9,7,6};
+        int [] array = {4,10,8,1,2,5,3,9,7,6,10,1,9,2,8,3,7,4,6,5};
         mergeSort(array, 0, array.length-1);
         ArrayUtils.print(array);
     }
-    
     
     public static void mergeSort(int [] array, int p, int r){
         if(p < r){
