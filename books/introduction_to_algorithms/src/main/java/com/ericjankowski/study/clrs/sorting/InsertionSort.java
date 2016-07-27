@@ -14,7 +14,7 @@ public class InsertionSort {
         int[] array = {7,5,2,9,4,6,10,3,8,1};
         sort(array);
         ArrayUtils.print(array);
-        test(array);
+        ArrayUtils.verifySorted(array);
     }
     
     private static void sort(int[] array){
@@ -26,14 +26,6 @@ public class InsertionSort {
                 i = i-1;
             }
             array[i+1] = key;
-        }
-    }
-    
-    private static void test(int[] array) {
-        for(int i=1;i<array.length;i++){
-            if(array[i] < array[i-1]){
-                throw new RuntimeException("The array is not properly sorted.");
-            }
         }
     }
 }
