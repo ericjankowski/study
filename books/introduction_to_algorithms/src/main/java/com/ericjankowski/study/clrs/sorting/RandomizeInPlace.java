@@ -9,7 +9,7 @@ public class RandomizeInPlace {
         ArrayUtils.print(array);
     }
 
-    private static void randomizeInPlace(int[] array) {
+    public static void randomizeInPlace(int[] array) {
         for(int i = 0; i<array.length;i++){
             int temp = array[i];
             int randomIndex = (int)(array.length-((Math.random() * (array.length-i))));
