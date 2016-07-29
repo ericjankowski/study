@@ -4,20 +4,19 @@ import com.ericjankowski.study.utils.ArrayUtils;
 
 public class PriorityQueue {
     public static void main(String[] args) {
-        int [] array = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19};
+        int [] array = {1,2,3,4,5,6,7,8,9};
         buildMaxHeap(array);
+        heapIncreaseKey(array, 4, 20);
         for(int i = 0; i<array.length; i++){
             int max = heapExtractMaximum(array, array.length-i);
             System.out.println("Maximum: " + max);
             ArrayUtils.print(array);
         }
+        
+        
     }
     
-    public static int heapMaximum (int [] array){
-        return array[0];
-    }
-    
-    public static int heapExtractMaximum (int [] array, int heapSize){
+    private static int heapExtractMaximum (int [] array, int heapSize){
         if(heapSize < 1){
             throw new IllegalArgumentException("Heap is empty, there is no valid maximum");
         }
@@ -48,6 +47,19 @@ public class PriorityQueue {
     private static void buildMaxHeap(int [] array){
         for(int i = array.length / 2; i>= 0; i--){
             maxHeapify(array, i, array.length);
+        }
+    }
+    
+    private static void heapIncreaseKey(int [] array, int index, int key){
+        if(key<array[index]){
+            throw new IllegalArgumentException("New key is smaller than current key.  This is not a valid increase.");
+        }
+        array[index] = key;
+        while(index > 0 && array[(int)(Math.floor((index-1)/2))] < array[index]){
+            int temp = array[index];
+            array[index] = array[(int)(Math.floor((index-1)/2))];
+            array[(int)(Math.floor((index-1)/2))] = temp;
+            index = (int)(Math.floor((index-1)/2));
         }
     }
 }
