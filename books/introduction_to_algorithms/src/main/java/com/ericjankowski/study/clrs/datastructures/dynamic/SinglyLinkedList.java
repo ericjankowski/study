@@ -17,6 +17,26 @@ public class SinglyLinkedList {
         size++;
         
     }
+    
+    public void delete(Object value){
+        ListNode current = head;
+        ListNode previous = null;
+        
+        while(current.next != null){
+            if (current.key == value){
+                if(previous == null){
+                    head = current.next;
+                }else{
+                    previous.next = current.next;
+                }
+                size--;
+                break;
+            }else{
+                previous = current;
+                current = current.next;
+            }
+        }
+    }
 
     public int size() {
         return size;
