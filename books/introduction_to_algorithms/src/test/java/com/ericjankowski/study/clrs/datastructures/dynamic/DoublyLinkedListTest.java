@@ -4,20 +4,20 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class SinglyLinkedListTest {
+public class DoublyLinkedListTest {
 
     @Test
     public void insertIncreasesSize() {
-        SinglyLinkedList list = new SinglyLinkedList();
-        
+        DoublyLinkedList list = new DoublyLinkedList();
+
         list.insert("Foo");
-        
+
         assertEquals(1, list.size());
     }
     
     @Test
     public void insertIncreasesSizeCorrectly() {
-        SinglyLinkedList list = new SinglyLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
         
         list.insert("Foo");
         list.insert("Bar");
@@ -28,7 +28,7 @@ public class SinglyLinkedListTest {
     
     @Test
     public void deleteDecreasesSize() {
-        SinglyLinkedList list = new SinglyLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
         
         list.insert("Foo");
         list.insert("Bar");
@@ -41,7 +41,7 @@ public class SinglyLinkedListTest {
     
     @Test
     public void deleteDecreasesSizeCorrectly() {
-        SinglyLinkedList list = new SinglyLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
         
         list.insert("Foo");
         list.insert("Bar");
@@ -55,7 +55,7 @@ public class SinglyLinkedListTest {
     
     @Test
     public void deleteDecreasesSizeCorrectlyWhenItemToBeDeletedIsAtTheEndOfTheList() {
-        SinglyLinkedList list = new SinglyLinkedList();
+        DoublyLinkedList list = new DoublyLinkedList();
         
         list.insert("Foo");
         list.insert("Bar");
@@ -66,4 +66,5 @@ public class SinglyLinkedListTest {
         assertEquals(2, list.size());
         assertEquals("[Baz, Bar]", list.toString());
     }
+
 }

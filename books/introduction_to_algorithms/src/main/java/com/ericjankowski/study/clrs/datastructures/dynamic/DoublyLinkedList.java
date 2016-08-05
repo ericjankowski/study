@@ -1,6 +1,8 @@
 package com.ericjankowski.study.clrs.datastructures.dynamic;
 
-public class SinglyLinkedList {
+
+
+public class DoublyLinkedList {
     
     ListNode head;
     int size = 0;
@@ -12,27 +14,25 @@ public class SinglyLinkedList {
             head = node;
         }else{
             node.next = head;
+            head.previous = node;
             head = node;
         }
         size++;
-        
     }
     
     public void delete(Object value){
         ListNode current = head;
-        ListNode previous = null;
         
         while(current != null){
             if (current.key == value){
-                if(previous == null){
+                if(current.previous == null){
                     head = current.next;
                 }else{
-                    previous.next = current.next;
+                    current.previous.next = current.next;
                 }
                 size--;
                 break;
             }else{
-                previous = current;
                 current = current.next;
             }
         }
@@ -56,6 +56,7 @@ public class SinglyLinkedList {
     class ListNode{
         Object key;
         ListNode next;
+        ListNode previous;
         
         ListNode(Object key){
             this.key = key;
