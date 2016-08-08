@@ -14,12 +14,15 @@ public class BinaryTree {
     private void insert(TreeNode nodeToInsert, TreeNode treeNode) {
         if(treeNode == null){
             root = nodeToInsert;
+            size++;
         }else if(treeNode.leftChild == null){
             treeNode.leftChild = nodeToInsert;
             nodeToInsert.parent = treeNode;
+            size++;
         }else if(treeNode.rightChild == null){
             treeNode.rightChild = nodeToInsert;
             nodeToInsert.parent = treeNode;
+            size++;
         }else{
             int coinFlip = (int)((Math.random()*100000000)%2);
             if(coinFlip == 0){
@@ -28,7 +31,6 @@ public class BinaryTree {
                 insert(nodeToInsert, treeNode.rightChild);
             }
         }
-        size++;
     }
     
     public int size() {

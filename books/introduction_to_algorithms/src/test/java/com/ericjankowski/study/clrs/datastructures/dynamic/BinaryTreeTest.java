@@ -24,4 +24,19 @@ public class BinaryTreeTest {
         
         assertEquals(2, tree.size());
     }
+    
+    @Test
+    public void insertIncreasesSizeAlright() {
+        BinaryTree tree = new BinaryTree();
+        
+        tree.insert("Foo");
+        tree.insert("Bar");
+        tree.insert("Boo");
+        tree.insert("Car");
+        tree.insert("Moo");
+        tree.insert("Mar");
+        tree.insert("Sue");
+        
+        assertEquals(7, tree.size());
+    }
 }
