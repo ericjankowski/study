@@ -1,8 +1,10 @@
 package com.ericjankowski.study.clrs.datastructures.dynamic;
 
+import com.ericjankowski.study.clrs.datastructures.dynamic.BinarySearchTree.Node;
+
 public class BinarySearchTree {
 
-    private Node root;
+    Node root;
 
     public void delete() {
     }
@@ -35,25 +37,33 @@ public class BinarySearchTree {
     }
 
     public int minimum() {
-        if(root == null){
+        return minimum(root).key;
+    }
+    
+    private Node minimum(Node tree){
+        if(tree == null){
             throw new IllegalStateException("An empty tree has no minimum.");
         }
-        Node target = root;
+        Node target = tree;
         while(target.leftChild != null){
             target = target.leftChild;
         }
-        return target.key;
+        return target;
+    }
+    
+    public int maximum() {
+        return maximum(root).key;
     }
 
-    public int maximum() {
-        if(root == null){
+    private Node maximum(Node tree){
+        if(tree == null){
             throw new IllegalStateException("An empty tree has no maximum.");
         }
-        Node target = root;
+        Node target = tree;
         while(target.rightChild != null){
             target = target.rightChild;
         }
-        return target.key;
+        return target;
     }
 
     public Node predecessor(Node target) {
@@ -64,15 +74,15 @@ public class BinarySearchTree {
         return null;
     }
 
-    public boolean search(int key) {
+    public Node search(int key) {
         return search(key, root);
     }
 
-    private boolean search(int key, Node target) {
+    private Node search(int key, Node target) {
         if(target == null){
-            return false;
+            return null;
         }else if(key == target.key){
-            return true;
+            return target;
         }else if(key < target.key){
             return search(key, target.leftChild);
         }else{
@@ -103,6 +113,40 @@ public class BinarySearchTree {
 
         public Node(int key) {
             this.key = key;
+        }
+
+        public Node successor() {
+            if(rightChild ==  null && parent == null){
+                return null;
+            }
+            if(rightChild != null){
+                return minimum(rightChild);
+            }else{
+                Node x = this;
+                Node y = this.parent;
+                while(y != null && x.equals(y.rightChild)){
+                    x = y;
+                    y = y.parent;
+                }
+                return y;
+            }
+        }
+
+        public Node predecessor() {
+            if(leftChild ==  null && parent == null){
+                return null;
+            }
+            if(leftChild != null){
+                return maximum(leftChild);
+            }else{
+                Node x = this;
+                Node y = this.parent;
+                while(y != null && x.equals(y.leftChild)){
+                    x = y;
+                    y = y.parent;
+                }
+                return y;
+            }
         }
     }
 }

@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import com.ericjankowski.study.clrs.datastructures.dynamic.BinarySearchTree.Node;
+
 public class BinarySearchTreeTest {
 
     @Test
@@ -57,18 +59,18 @@ public class BinarySearchTreeTest {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(5);
         
-        boolean result = tree.search(5);
+        Node result = tree.search(5);
         
-        assertTrue(result);
+        assertEquals(5, result.key);
     }
     @Test
     public void searchSimpleNotFound() {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(5);
         
-        boolean result = tree.search(4);
+        Node result = tree.search(4);
         
-        assertFalse(result);
+        assertNull(result);
     }
     
     @Test
@@ -77,9 +79,9 @@ public class BinarySearchTreeTest {
         tree.insert(5);
         tree.insert(2);
         
-        boolean result = tree.search(2);
+        Node result = tree.search(2);
         
-        assertTrue(result);
+        assertEquals(2, result.key);
     }
     @Test
     public void searchTwoElementsNotFound() {
@@ -87,9 +89,9 @@ public class BinarySearchTreeTest {
         tree.insert(5);
         tree.insert(2);
         
-        boolean result = tree.search(4);
+        Node result = tree.search(4);
         
-        assertFalse(result);
+        assertNull(result);
     }
     
     @Test
@@ -100,9 +102,9 @@ public class BinarySearchTreeTest {
         tree.insert(3);
         tree.insert(6);
         
-        boolean result = tree.search(6);
+        Node result = tree.search(6);
         
-        assertTrue(result);
+        assertEquals(6, result.key);
     }
     @Test
     public void searchFourElementsNotFound() {
@@ -112,9 +114,9 @@ public class BinarySearchTreeTest {
         tree.insert(3);
         tree.insert(6);
         
-        boolean result = tree.search(7);
+        Node result = tree.search(7);
         
-        assertFalse(result);
+        assertNull(result);
     }
     
     @Test
@@ -129,9 +131,9 @@ public class BinarySearchTreeTest {
         tree.insert(4);
         tree.insert(8);
         
-        boolean result = tree.search(8);
+        Node result = tree.search(8);
         
-        assertTrue(result);
+        assertEquals(8, result.key);
     }
     @Test
     public void searchEightElementsNotFound() {
@@ -145,9 +147,9 @@ public class BinarySearchTreeTest {
         tree.insert(4);
         tree.insert(8);
         
-        boolean result = tree.search(9);
+        Node result = tree.search(9);
         
-        assertFalse(result);
+        assertNull(result);
     }
     
     @Test
@@ -268,5 +270,129 @@ public class BinarySearchTreeTest {
             assertEquals("An empty tree has no maximum.", e.getMessage());
         }
         
+    }
+    
+    @Test
+    public void treeOfSizeOneHasNoSuccessor() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+
+        Node node = tree.root;
+        
+        assertNull(node.successor());
+    }
+    
+    @Test
+    public void successorWithTwoElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        Node node = tree.search(2); 
+               
+        assertEquals(5, node.successor().key);
+    }
+    
+    @Test
+    public void successorWithFourElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        Node node = tree.search(2); 
+        
+        assertEquals(3, node.successor().key);
+    }
+
+    @Test
+    public void successorWithEightElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(8);
+        Node one = tree.search(1);
+        Node two = tree.search(2);
+        Node three = tree.search(3);
+        Node four = tree.search(4);
+        Node five = tree.search(5);
+        Node six = tree.search(6);
+        Node seven = tree.search(7);
+        Node eight = tree.search(8);
+        
+        assertEquals(2, one.successor().key);
+        assertEquals(3, two.successor().key);
+        assertEquals(4, three.successor().key);
+        assertEquals(5, four.successor().key);
+        assertEquals(6, five.successor().key);
+        assertEquals(7, six.successor().key);
+        assertEquals(8, seven.successor().key);
+        assertNull(eight.successor());
+    }
+    
+    @Test
+    public void treeOfSizeOneHasNoPredecessor() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+
+        Node node = tree.root;
+        
+        assertNull(node.predecessor());
+    }
+    
+    @Test
+    public void predecessorWithTwoElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        Node node = tree.search(5); 
+               
+        assertEquals(2, node.predecessor().key);
+    }
+    
+    @Test
+    public void predecessorWithFourElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        Node node = tree.search(5); 
+        
+        assertEquals(3, node.predecessor().key);
+    }
+
+    @Test
+    public void predecessorWithEightElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(8);
+        Node one = tree.search(1);
+        Node two = tree.search(2);
+        Node three = tree.search(3);
+        Node four = tree.search(4);
+        Node five = tree.search(5);
+        Node six = tree.search(6);
+        Node seven = tree.search(7);
+        Node eight = tree.search(8);
+        
+        assertNull(one.predecessor());
+        assertEquals(1, two.predecessor().key);
+        assertEquals(2, three.predecessor().key);
+        assertEquals(3, four.predecessor().key);
+        assertEquals(4, five.predecessor().key);
+        assertEquals(5, six.predecessor().key);
+        assertEquals(6, seven.predecessor().key);
+        assertEquals(7, eight.predecessor().key);
     }
 }
