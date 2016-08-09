@@ -149,4 +149,124 @@ public class BinarySearchTreeTest {
         
         assertFalse(result);
     }
+    
+    @Test
+    public void minimumSimple() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        
+        assertEquals(5, tree.minimum());
+    }
+    
+    @Test
+    public void minimumWithTwoElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        
+        assertEquals(2, tree.minimum());
+    }
+    
+    @Test
+    public void minimumWithFourElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        
+        assertEquals(2, tree.minimum());
+    }
+    @Test
+    public void minimumWithEightElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(8);
+        
+        assertEquals(1, tree.minimum());
+    }
+    
+    @Test
+    public void cantCallMinimumOnAnEmptyTree(){
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        try{
+            tree.minimum();
+            fail("Should have thrown an illegal state exception.  An empty tree has no minimum.");
+        }catch(Exception e){
+            assertTrue(e instanceof IllegalStateException);
+            assertEquals("An empty tree has no minimum.", e.getMessage());
+        }
+        
+    }
+    
+    @Test
+    public void maximumSimple() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        
+        assertEquals(5, tree.maximum());
+    }
+    
+    @Test
+    public void maximumWithTwoElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        
+        assertEquals(5, tree.maximum());
+    }
+    
+    @Test
+    public void maximumWithFourElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        
+        assertEquals(6, tree.maximum());
+    }
+    @Test
+    public void maximumWithEightElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(8);
+        
+        assertEquals(8, tree.maximum());
+    }
+    
+    @Test
+    public void cantCallMaximumOnAnEmptyTree(){
+        BinarySearchTree tree = new BinarySearchTree();
+        
+        try{
+            tree.maximum();
+            fail("Should have thrown an illegal state exception.  An empty tree has no maximum.");
+        }catch(Exception e){
+            assertTrue(e instanceof IllegalStateException);
+            assertEquals("An empty tree has no maximum.", e.getMessage());
+        }
+        
+    }
 }

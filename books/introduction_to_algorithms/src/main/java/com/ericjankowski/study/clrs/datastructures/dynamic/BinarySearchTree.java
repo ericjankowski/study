@@ -35,11 +35,25 @@ public class BinarySearchTree {
     }
 
     public int minimum() {
-        return 0;
+        if(root == null){
+            throw new IllegalStateException("An empty tree has no minimum.");
+        }
+        Node target = root;
+        while(target.leftChild != null){
+            target = target.leftChild;
+        }
+        return target.key;
     }
 
     public int maximum() {
-        return 0;
+        if(root == null){
+            throw new IllegalStateException("An empty tree has no maximum.");
+        }
+        Node target = root;
+        while(target.rightChild != null){
+            target = target.rightChild;
+        }
+        return target.key;
     }
 
     public Node predecessor(Node target) {
