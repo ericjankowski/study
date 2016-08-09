@@ -50,8 +50,20 @@ public class BinarySearchTree {
         return null;
     }
 
-    public Node search(int key) {
-        return null;
+    public boolean search(int key) {
+        return search(key, root);
+    }
+
+    private boolean search(int key, Node target) {
+        if(target == null){
+            return false;
+        }else if(key == target.key){
+            return true;
+        }else if(key < target.key){
+            return search(key, target.leftChild);
+        }else{
+            return search(key, target.rightChild);
+        }
     }
 
     public String toString() {
