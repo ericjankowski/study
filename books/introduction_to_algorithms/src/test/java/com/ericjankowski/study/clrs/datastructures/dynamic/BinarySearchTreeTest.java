@@ -395,4 +395,58 @@ public class BinarySearchTreeTest {
         assertEquals(6, seven.predecessor().key);
         assertEquals(7, eight.predecessor().key);
     }
+    
+    @Test
+    public void simpleDelete() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        Node node = tree.root;
+        tree.delete(node);
+        
+        assertEquals("[]", tree.toString());
+    }
+    
+    @Test
+    public void deleteWithTwoElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        Node node = tree.search(5);
+        tree.delete(node);
+               
+        assertEquals(2, tree.root.key);
+        assertEquals("[2]", tree.toString());
+    }
+    
+    @Test
+    public void deleteWithFourElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        Node target = tree.search(2);
+        tree.delete(target);
+        
+        assertEquals(3, tree.root.leftChild.key);
+        assertEquals("[3,5,6]", tree.toString());
+    }
+
+    @Test
+    public void deleteWithEightElements() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.insert(5);
+        tree.insert(2);
+        tree.insert(3);
+        tree.insert(6);
+        tree.insert(1);
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(8);
+        Node target = tree.search(6);
+        tree.delete(target);
+        
+        assertEquals(7, tree.root.rightChild.key);
+        assertEquals("[1,2,3,4,5,7,8]", tree.toString());
+    }
 }

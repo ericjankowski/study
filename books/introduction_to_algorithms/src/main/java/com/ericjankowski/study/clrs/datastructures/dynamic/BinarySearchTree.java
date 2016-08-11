@@ -1,12 +1,40 @@
 package com.ericjankowski.study.clrs.datastructures.dynamic;
 
-import com.ericjankowski.study.clrs.datastructures.dynamic.BinarySearchTree.Node;
 
 public class BinarySearchTree {
 
     Node root;
 
-    public void delete() {
+    public void delete(Node z) {
+        Node x = null;
+        Node y = null;
+        if(z.leftChild == null || z.rightChild == null){
+            y = z;
+        }else{
+            y = z.successor();
+        }
+        
+        if(y.leftChild != null){
+            x = y.leftChild;
+        }else{
+            x = y.rightChild;
+        }
+        
+        if(x != null){
+            x.parent = y.parent;
+        }
+        
+        if(y.parent == null){
+            root = x;
+        }else if(y.equals(y.parent.leftChild)){
+            y.parent.leftChild = x;
+        }else{
+            y.parent.rightChild = x;
+        }
+        
+        if(!y.equals(z)){
+            z.key = y.key;
+        }
     }
 
     public void insert(int key) {
@@ -92,7 +120,7 @@ public class BinarySearchTree {
 
     public String toString() {
         String result = inOrderTreeWalk(root);
-        result = result.substring(0, result.length()-1);
+        result = result.length() > 0 ? result.substring(0, result.length()-1) : "" ;
         return "[" + result + "]";
     }
 
