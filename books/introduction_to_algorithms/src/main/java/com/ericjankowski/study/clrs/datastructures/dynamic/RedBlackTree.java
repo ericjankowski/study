@@ -92,14 +92,6 @@ public class RedBlackTree {
         return target;
     }
 
-    public Node predecessor(Node target) {
-        return null;
-    }
-
-    public Node successor(Node target) {
-        return null;
-    }
-
     public Node search(int key) {
         return search(key, root);
     }
@@ -133,7 +125,6 @@ public class RedBlackTree {
     public void leftRotate(Node target){
         Node y = target.rightChild;
         target.rightChild = y.leftChild;
-        System.out.println("Target's Right Child: " + target.rightChild);
         
         if(y.leftChild != null){
             y.leftChild.parent = target;

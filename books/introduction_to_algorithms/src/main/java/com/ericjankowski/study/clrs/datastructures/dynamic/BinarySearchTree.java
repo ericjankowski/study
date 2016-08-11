@@ -94,14 +94,6 @@ public class BinarySearchTree {
         return target;
     }
 
-    public Node predecessor(Node target) {
-        return null;
-    }
-
-    public Node successor(Node target) {
-        return null;
-    }
-
     public Node search(int key) {
         return search(key, root);
     }
