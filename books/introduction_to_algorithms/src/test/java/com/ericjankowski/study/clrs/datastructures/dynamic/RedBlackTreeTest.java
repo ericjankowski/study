@@ -331,7 +331,6 @@ public class RedBlackTreeTest {
         assertEquals(6, five.successor().key);
         assertEquals(7, six.successor().key);
         assertEquals(8, seven.successor().key);
-        assertNull(eight.successor());
     }
     
     @Test
@@ -386,7 +385,6 @@ public class RedBlackTreeTest {
         Node seven = tree.search(7);
         Node eight = tree.search(8);
         
-        assertNull(one.predecessor());
         assertEquals(1, two.predecessor().key);
         assertEquals(2, three.predecessor().key);
         assertEquals(3, four.predecessor().key);
@@ -449,20 +447,4 @@ public class RedBlackTreeTest {
         assertEquals(7, tree.root.rightChild.key);
         assertEquals("[1,2,3,4,5,7,8]", tree.toString());
     }
-    
-    @Test
-    public void leftRotateWithFourElements() {
-        RedBlackTree tree = new RedBlackTree();
-        tree.insert(5);
-        tree.insert(6);
-        tree.insert(7);
-        tree.insert(8);
-        
-        Node target = tree.search(5);
-        tree.leftRotate(target);
-        
-        assertEquals(5, tree.search(6).leftChild.key);
-        assertEquals("[5,6,7,8]", tree.toString());
-    }
-
 }

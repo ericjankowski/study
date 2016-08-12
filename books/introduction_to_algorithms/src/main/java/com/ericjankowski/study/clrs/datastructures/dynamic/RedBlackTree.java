@@ -1,65 +1,171 @@
 package com.ericjankowski.study.clrs.datastructures.dynamic;
 
 public class RedBlackTree {
+    Node sentinel;
     Node root;
+    
+    public RedBlackTree(){
+        sentinel = new Node(-987654321);
+        sentinel.leftChild = null;
+        sentinel.rightChild = null;
+        sentinel.parent = null;
+        sentinel.color = "BLACK";
+        root = sentinel;
+    }
 
-    public void delete(Node z) {
-        Node x = null;
+    public void delete(Node target) {
         Node y = null;
-        if(z.leftChild == null || z.rightChild == null){
-            y = z;
+        Node x = null;
+        if(target.leftChild == sentinel || target.rightChild == sentinel){
+            y = target;
         }else{
-            y = z.successor();
+            y = target.successor();
         }
         
-        if(y.leftChild != null){
+        if (y.leftChild != sentinel){
             x = y.leftChild;
         }else{
             x = y.rightChild;
         }
         
-        if(x != null){
-            x.parent = y.parent;
-        }
+        x.parent = y.parent;
         
-        if(y.parent == null){
+        if(y.parent == sentinel){
             root = x;
-        }else if(y.equals(y.parent.leftChild)){
+        }else if(y == y.parent.leftChild){
             y.parent.leftChild = x;
         }else{
             y.parent.rightChild = x;
         }
         
-        if(!y.equals(z)){
-            z.key = y.key;
+        if(y != target){
+            target.key = y.key;
+        }
+        
+        if(y.color.equals("BLACK")){
+            redBlackDeleteFixup(x);
         }
     }
 
-    public void insert(int key) {
-        Node node = new Node(key);
-        if(root == null){
-            root = node;
-        }else{
-            insert(node, root);
+    private void redBlackDeleteFixup(Node target) {
+        Node w = null;
+        while(target != root && target.color.equals("BLACK")){
+            if(target == target.parent.leftChild){
+                w = target.parent.rightChild;
+                if(w.color.equals("RED")){
+                    w.color = "BLACK";
+                    target.parent.color = "RED";
+                    leftRotate(target);
+                    w = target.parent.rightChild;
+                }
+                if(w.leftChild.color.equals("BLACK") && w.rightChild.color.equals("BLACK")){
+                    w.color = "RED";
+                    target = target.parent;
+                }else {
+                    if(w.rightChild.color.equals("BLACK")){
+                        w.leftChild.color = "BLACK";
+                        w.color = "RED";
+                        rightRotate(w);
+                        w = target.parent.rightChild;
+                    }
+                    w.color = target.parent.color;
+                    target.parent.color = "BLACK";
+                    w.rightChild.color = "BLACK";
+                    leftRotate(target.parent);
+                    target = root;
+                }
+            } else {
+                w = target.parent.leftChild;
+                if(w.color.equals("RED")){
+                    w.color = "BLACK";
+                    target.parent.color = "RED";
+                    rightRotate(target);
+                    w = target.parent.leftChild;
+                }
+                if(w.rightChild.color.equals("BLACK") && w.leftChild.color.equals("BLACK")){
+                    w.color = "RED";
+                    target = target.parent;
+                }else {
+                    if(w.leftChild.color.equals("BLACK")){
+                        w.rightChild.color = "BLACK";
+                        w.color = "RED";
+                        leftRotate(w);
+                        w = target.parent.leftChild;
+                    }
+                    w.color = target.parent.color;
+                    target.parent.color = "BLACK";
+                    w.leftChild.color = "BLACK";
+                    rightRotate(target.parent);
+                    target = root;
+                }
+            }
         }
+        target.color = "BLACK";
+    }
+
+    public void insert(int key) {
+        Node target = new Node(key);
+        Node y = sentinel;
+        Node x = root;
+        while(x != sentinel){
+            y = x;
+            if(target.key < x.key){
+                x = x.leftChild;
+            }else{
+                x = x.rightChild;
+            }
+        }
+        target.parent = y;
+        if(y == sentinel){
+            root = target;
+        }else if(target.key < y.key){
+            y.leftChild = target;
+        }else{
+            y.rightChild = target;
+        }
+        target.leftChild = sentinel;
+        target.rightChild = sentinel;
+        target.color = "RED";
+        balanceTree(target);
     }
     
-    private void insert(Node target, Node location){
-        if(target.key <= location.key){
-            if(location.leftChild == null){
-                location.leftChild = target;
-                target.parent = location;
+    private void balanceTree(Node z) {
+        while(z.parent.color.equals("RED")){
+            if(z.parent == z.parent.parent.leftChild){
+                Node y = z.parent.parent.rightChild;
+                if(y.color.equals("RED")){
+                    z.parent.color = "BLACK";
+                    y.color = "BLACK";
+                    z.parent.parent.color = "RED";
+                    z = z.parent.parent;
+                }else {
+                    if(z == z.parent.rightChild){
+                        z = z.parent;
+                        leftRotate(z);
+                    }
+                    z.parent.color = "BLACK";
+                    z.parent.parent.color = "RED";
+                    rightRotate(z.parent.parent);
+                }
             }else{
-                insert(target, location.leftChild);
-            }
-        }else{
-            if(location.rightChild == null){
-                location.rightChild = target;
-                target.parent = location;
-            }else{
-                insert(target, location.rightChild);
+                Node y = z.parent.parent.leftChild;
+                if(y.color.equals("RED")){
+                    z.parent.color = "BLACK";
+                    y.color = "BLACK";
+                    z.parent.parent.color = "RED";
+                    z = z.parent.parent;
+                }else {
+                    if(z == z.parent.leftChild){
+                        z = z.parent;
+                        rightRotate(z);
+                    }
+                    z.parent.color = "BLACK";
+                    z.parent.parent.color = "RED";
+                    leftRotate(z.parent.parent);
+                }
             }
         }
+        root.color = "BLACK";
     }
 
     public int minimum() {
@@ -67,11 +173,11 @@ public class RedBlackTree {
     }
     
     private Node minimum(Node tree){
-        if(tree == null){
+        if(tree == sentinel){
             throw new IllegalStateException("An empty tree has no minimum.");
         }
         Node target = tree;
-        while(target.leftChild != null){
+        while(target.leftChild != sentinel){
             target = target.leftChild;
         }
         return target;
@@ -82,11 +188,11 @@ public class RedBlackTree {
     }
 
     private Node maximum(Node tree){
-        if(tree == null){
+        if(tree == sentinel){
             throw new IllegalStateException("An empty tree has no maximum.");
         }
         Node target = tree;
-        while(target.rightChild != null){
+        while(target.rightChild != sentinel){
             target = target.rightChild;
         }
         return target;
@@ -97,7 +203,7 @@ public class RedBlackTree {
     }
 
     private Node search(int key, Node target) {
-        if(target == null){
+        if(target == sentinel){
             return null;
         }else if(key == target.key){
             return target;
@@ -115,7 +221,7 @@ public class RedBlackTree {
     }
 
     private String inOrderTreeWalk(Node target) {
-        if(target != null){
+        if(target != sentinel){
             return inOrderTreeWalk(target.leftChild) + target.key + "," + inOrderTreeWalk(target.rightChild);
         }else{
             return "";
@@ -126,11 +232,11 @@ public class RedBlackTree {
         Node y = target.rightChild;
         target.rightChild = y.leftChild;
         
-        if(y.leftChild != null){
+        if(y.leftChild != sentinel){
             y.leftChild.parent = target;
         }
         y.parent = target.parent;
-        if(target.parent == null){
+        if(target.parent == sentinel){
             root = y;
         }else if(target.equals(target.parent.leftChild)){
             target.parent.leftChild = y;
@@ -140,6 +246,26 @@ public class RedBlackTree {
         y.leftChild = target;
         target.parent = y;
     }
+    
+    public void rightRotate(Node target){
+        Node y = target.leftChild;
+        target.leftChild = y.rightChild;
+        
+        if(y.rightChild != sentinel){
+            y.rightChild.parent = target;
+        }
+        y.parent = target.parent;
+        if(target.parent == sentinel){
+            root = y;
+        }else if(target.equals(target.parent.rightChild)){
+            target.parent.rightChild = y;
+        }else{
+            target.parent.leftChild = y;
+        }
+        y.rightChild = target;
+        target.parent = y;
+    }
+
 
     public class Node {
         int key;
@@ -153,15 +279,15 @@ public class RedBlackTree {
         }
 
         public Node successor() {
-            if(rightChild ==  null && parent == null){
+            if(rightChild ==  sentinel && parent == sentinel){
                 return null;
             }
-            if(rightChild != null){
+            if(rightChild != sentinel){
                 return minimum(rightChild);
             }else{
                 Node x = this;
                 Node y = this.parent;
-                while(y != null && x.equals(y.rightChild)){
+                while(y != sentinel && x.equals(y.rightChild)){
                     x = y;
                     y = y.parent;
                 }
@@ -170,20 +296,24 @@ public class RedBlackTree {
         }
 
         public Node predecessor() {
-            if(leftChild ==  null && parent == null){
+            if(leftChild ==  sentinel && parent == sentinel){
                 return null;
             }
-            if(leftChild != null){
+            if(leftChild != sentinel){
                 return maximum(leftChild);
             }else{
                 Node x = this;
                 Node y = this.parent;
-                while(y != null && x.equals(y.leftChild)){
+                while(y != sentinel && x.equals(y.leftChild)){
                     x = y;
                     y = y.parent;
                 }
                 return y;
             }
+        }
+        
+        public String toString(){
+            return String.valueOf(key+"("+color+")");
         }
     }
 }
