@@ -522,4 +522,21 @@ public class OrderStatisticTreeTest {
         assertEquals(7, tree.rank(seven));
         assertEquals(8, tree.rank(eight));
     }
+    
+    @Test
+    public void FizzBuzz(){
+        String result = "";
+        for(int i = 0; i<=15; i++){
+            if(i%15 == 0){
+                result += "FizzBuzz\n";
+            }else if(i%5 == 0){
+                result += "Buzz\n";
+            }else if(i%3 == 0){
+                result += "Fizz\n";
+            }else{
+                result += String.valueOf(i) + "\n";
+            }
+        }
+        System.out.println(result);
+    }
 }    
