@@ -1,0 +1,17 @@
+Big Data Tools and Topics
+
+HANA
+Cassandra
+Cloudera
+Pig
+MapReduce
+Sqoop
+NoSQL
+Hive
+Hadoop
+R
+Netezza
+Solr
+hBase
+MicroStrategy
+Informatica

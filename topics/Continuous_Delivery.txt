@@ -1,0 +1,14 @@
+Continuous Delivery Tools and Topics
+
+Chef
+Puppet
+DevOps
+SDN (Software Defined Network)
+Docker
+Netezza
+webMethods
+Zookeeper
+Jenkins
+Vagrant
+
+

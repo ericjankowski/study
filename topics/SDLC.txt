@@ -1,0 +1,9 @@
+Software Development Life Cycle tools and topics
+
+CMMI (Capability Maturity Model Integration)
+PMBOK
+DOORS (Dynamic Object-Oriented Requirements System)
+JIRA
+Scrum
+Agile
+Six Sigma
