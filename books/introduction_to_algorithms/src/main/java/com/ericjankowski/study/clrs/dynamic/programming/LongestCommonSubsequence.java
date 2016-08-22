@@ -10,10 +10,9 @@ public class LongestCommonSubsequence {
         int m = x.length;
         int n = y.length;
         
-        for(int i = 1; i<m; i++){
-            for(int j = 1; j<n; j++){
-                if(x[i] == y[j]){
-                    System.out.println("found a match");
+        for(int i = 1; i<=m; i++){
+            for(int j = 1; j<=n; j++){
+                if(x[i-1] == y[j-1]){
                     c[i][j] = c[i-1][j-1] + 1;
                     b[i][j] = 45;
                 }else if(c[i-1][j] >= c[i][j-1]){
@@ -30,15 +29,12 @@ public class LongestCommonSubsequence {
     }
 
     private static void printLCS(int[][] b, char[] x, int i, int j) {
-        System.out.println("i: " + i + " :: j: " + j);
-        System.out.println(b[i][j]);
-        
         if(i == 0 || j == 0){
             return;
         }
         if(b[i][j] == 45){
             printLCS(b, x, i-1, j-1);
-            System.out.print(x[i]);
+            System.out.print(x[i-1]);
         }else if(b[i][j] == 90){
             printLCS(b, x, i-1, j);
         }else{
