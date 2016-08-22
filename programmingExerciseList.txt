@@ -6,6 +6,8 @@ Level 0
 	- Find the maximum key
 	- Find the minimum key
 - Binary search a sorted collection
+- Simple Recursion
+	- Towers of Hanoi
 - FizzBuzz
 
 Level 1
@@ -37,8 +39,18 @@ Level 3
 	- Fastest way through assembly line
 	- Matrix chain multiplication
 	- Longest common subsequence
+	- Optimal Binary Search Tree
+- Greedy algorithms
 
 Level 4
+
+Level 5
+
+Level 6
+
+Level 7
+
+Level 8
 
 Web
 - Serve a static web page

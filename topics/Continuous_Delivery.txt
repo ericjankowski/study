@@ -10,5 +10,9 @@ webMethods
 Zookeeper
 Jenkins
 Vagrant
-
+Teraform
+Salt
+Ansible
+Google Container Engine
+Kubernetes
 

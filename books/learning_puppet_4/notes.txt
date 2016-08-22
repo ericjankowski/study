@@ -1,0 +1,24 @@
+Learning Puppet 4 - Notes - Fall 2016
+
+Preface
+=======
+- Puppet makes easier the the jobs of System Administrators and Operations or DevOps Engineers
+- Puppet helps enforce standards
+- If you spend too much time managing computers then this book is for you.
+
+Chapter 1 - Thinking Declarative
+================================
+
+- Declarative programming can be easier to create, easier to read, and easier to maintain.
+
+Chapter 3 - Installing Puppet
+=============================
+
+Puppet ecosystem
+	- Puppet
+		- agent
+		- server
+		- PuppetDB
+	- Facter
+	- MCollective
+	- Ruby
