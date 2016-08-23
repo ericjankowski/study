@@ -19,6 +19,17 @@ Puppet ecosystem
 		- agent
 		- server
 		- PuppetDB
-	- Facter
-	- MCollective
+	- Facter - provides facts about a system
+	- MCollective - an orchestration tool
 	- Ruby
+	- Heira - command used to load data used by Puppet manifests and modules
+
+Linux Filesystem Hierarchy Standard
+	/etc directory should only contain static configuration files
+
+Chapter 4 - Writing Manifests
+=============================
+
+manifest files generally have the ".pp" extension
+
+Needing to use an exec resource is generally an indication of a poorly written policy
