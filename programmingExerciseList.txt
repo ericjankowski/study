@@ -41,6 +41,8 @@ Level 3
 	- Longest common subsequence
 	- Optimal Binary Search Tree
 - Greedy algorithms
+	- Activity Selection Problem
+	- Huffman Code Tree
 
 Level 4
 

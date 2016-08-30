@@ -33,3 +33,8 @@ Chapter 4 - Writing Manifests
 manifest files generally have the ".pp" extension
 
 Needing to use an exec resource is generally an indication of a poorly written policy - Avoid using exec whenever possible
+
+Chapter 5 - Using Puppet Configuration Language
+===============================================
+
+No variable redefinition - We're declarative here, not procedural.
