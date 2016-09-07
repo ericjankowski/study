@@ -45,6 +45,10 @@ Level 3
 	- Huffman Code Tree
 
 Level 4
+- Data structures
+	- Implement a B-Tree
+	- Implement a Binomial Heap
+	- Implement a Fibonacci Heap
 
 Level 5
 
