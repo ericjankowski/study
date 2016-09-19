@@ -2,6 +2,7 @@ Continuous Delivery Tools and Topics
 
 Chef
 Puppet
+	- Ruby
 DevOps
 SDN (Software Defined Network)
 Docker

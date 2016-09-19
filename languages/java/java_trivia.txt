@@ -1,0 +1,60 @@
+How many Java keywords can you name?
+
+	1.  abstract
+	2.  boolean
+	3.  break
+	4.  byte
+	5.  case
+	6.  catch
+	
+	7.  char
+	8.  class
+	9.  const
+	10. continue
+	11. default
+	12. do
+	
+	13. double
+	14. else
+	15. extends
+	16. final
+	17. finally
+	18. float
+	
+	19. for
+	20. goto
+	21. if
+	22. implements
+	23. import
+	24. instanceof
+	
+	25. int
+	26. interface
+	27. long
+	28. native
+	29. new
+	30. package
+	
+	31. private
+	32. protected
+	33. public
+	34. return
+	35. short
+	36. static
+
+	37. strictfp
+	38. super
+	39. switch
+	40. synchronized
+	41. this
+	42. throw
+
+	43. throws
+	44. transient
+	45. try
+	46. void
+	47. volatile
+	48. while
+
+	49. assert
+	50. enum

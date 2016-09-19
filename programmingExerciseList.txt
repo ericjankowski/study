@@ -49,6 +49,12 @@ Level 4
 	- Implement a B-Tree
 	- Implement a Binomial Heap
 	- Implement a Fibonacci Heap
+- Graph Algorithms
+	- Breadth-First Search
+	- Depth-First Search
+	- Topological Sort using DFS
+	- Minimum Spanning Tree using Kruskal's algorithm
+	- Minimum Spanning Tree using Prim's algorithm
 
 Level 5
 
