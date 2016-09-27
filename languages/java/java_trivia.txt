@@ -58,3 +58,25 @@ How many Java keywords can you name?
 
 	49. assert
 	50. enum
+
+Is this legal? - Yes
+
+	int [][] matrix [];
+
+What is the output
+
+	public class Tester{
+	    public void print(String s){
+	        System.out.println("I am a String");
+	    }
+	
+	    public void print(Object o){
+	        System.out.println("I am an Object");
+	    }
+	
+	    public static void main(String [] args){
+	        Tester tester = new Tester();
+	        Object o = new String("string_test");
+	        tester.print(o);
+	    }
+	}

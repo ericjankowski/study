@@ -1,0 +1,15 @@
+Self Test - Chapter 1 (page 75)
+
+1.  C 			- Correct
+2.  B and F		- Correct
+3.  B			- Correct
+4.  A 			- Correct
+5.  D and E 	- Correct
+6.  A 			- Correct
+7.  C 			- Incorrect (D is also a valid answer)
+8.  B 			- Correct
+9.  D 			- Correct
+10. C 			- Incorrect (A is correct because the Tablet class is reducing the visibility of the public interface method)
+11. C and E 	- Correct
+
+9/11 = 82% ->passing
