@@ -1,0 +1,36 @@
+Self Test - Chapter 1 (page 75)
+
+1.  C 						- Correct
+2.  B, F 					- Correct
+3.  B 						- Correct
+4.  A 						- Correct
+5.  D, E 					- Correct
+6.  A 						- Correct
+7.  C, D 					- Correct
+8.  B 						- Correct
+9.  D 						- Correct
+10. A 						- Correct
+11. C, E 					- Correct
+
+(11/11 = 100% -> passing)
+
+Self Test - Chapter 2 (page 154)
+
+1.  A, B, E 				- Incorrect (A is not a valid answer)
+2.  E 						- Correct
+3.  A 						- Correct
+4.  SKIP - drag and drop
+5.  D 						- Correct
+6.  C 						- Correct
+7.  A 						- Correct
+8.  F 						- Correct
+9.  A 						- Correct
+10. B 						- Correct
+11. E 						- Incorrect (C is the correct answer)
+12. C 						- Correct
+13. B 						- Incorrect (A is the correct answer)
+14. A, C 					- Correct
+
+(10/13 = 77% -> passing)
+
+(21/24 = 87.5% -> passing)
