@@ -63,7 +63,7 @@ Is this legal? - Yes
 
 	int [][] matrix [];
 
-What is the output
+What is the output? I am an Object String
 
 	public class Tester{
 	    public void print(String s){
@@ -76,7 +76,38 @@ What is the output
 	
 	    public static void main(String [] args){
 	        Tester tester = new Tester();
-	        Object o = new String("string_test");
+	        Object o = new String("String");
 	        tester.print(o);
 	    }
 	}
+
+Will this compile? - Yes
+
+	public interface Bounceable{
+		public void bounce();
+	}
+
+	public abstract class Ball implements Bounceable{
+		public void roll();
+	}
+
+	public class BeachBall extends Ball{
+		public void bounce(){}
+		public void roll(){}
+	}
+
+How many assignment operators are there in Java? - 12
+
+How many assignment operators in Java can you name?
+	1.  =
+	2.  +=
+	3.  -=
+	4.  *=
+	5.  /=
+	6.  %=
+	7.  &=
+	8.  ^=
+	9.  <<=
+	10. >>=
+	11. >>>=
+	12. |=
