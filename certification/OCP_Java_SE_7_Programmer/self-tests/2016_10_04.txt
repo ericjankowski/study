@@ -47,16 +47,17 @@ Self Test - Chapter 3 (page 212)
 
 Self Test - Chapter 4 (page 249)
 
-1.
-2. 
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+1. D 				- Correct
+2. C 				- Correct
+3. E 				- Correct
+4. E 				- Incorrect (G is the correct answer)
+5. Drag and Drop
+6. A 				- Correct
+7. A 				- Correct
+8. C 				- Correct
+9. C, F    			- Correct
+10. D 				- Correct
 
+(8/9 = 89% => passing)
 
 

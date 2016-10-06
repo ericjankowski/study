@@ -67,11 +67,11 @@ What is the output? I am an Object String
 
 	public class Tester{
 	    public void print(String s){
-	        System.out.println("I am a String");
+	        System.out.println("I am a String" + s);
 	    }
 	
 	    public void print(Object o){
-	        System.out.println("I am an Object");
+	        System.out.println("I am an Object" + o);
 	    }
 	
 	    public static void main(String [] args){
@@ -111,3 +111,6 @@ How many assignment operators in Java can you name?
 	10. >>=
 	11. >>>=
 	12. |=
+
+Will this compile? - No, decimal point literals are implicitly doubles.
+	float f = 32.3;
