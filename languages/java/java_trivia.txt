@@ -114,3 +114,10 @@ How many assignment operators in Java can you name?
 
 Will this compile? - No, decimal point literals are implicitly doubles.
 	float f = 32.3;
+
+
+What is the output:
+String s = "0123456789";
+System.out.println(s.substring(5)); 
+System.out.println(s.substring(5,7));
+
