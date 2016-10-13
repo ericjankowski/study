@@ -1,0 +1,99 @@
+Self Test - Chapter 1 (page 75)
+
+1.  
+2.  
+3.  
+4.  
+5.  
+6.  
+7.  
+8.  
+9.  
+10. 
+11. 
+
+Self Test - Chapter 2 (page 154)
+
+1.  
+2.  
+3.  
+4.  
+5.  
+6.  
+7.  
+8.  
+9.  
+10. 
+11. 
+12.
+13.
+14. 
+
+Self Test - Chapter 3 (page 212)
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+
+Self Test - Chapter 4 (page 249)
+
+1.
+2. 
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+
+Self Test - Chapter 5 (page 298)
+
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+
+Self Test - Chapter 6 (page 364)
+
+1.  A 			- Correct
+2.  B 			- Correct
+3.  C, D 		- Correct
+4.  E 			- Correct
+5.  A, F, D 	- Correct
+6.  E 			- Correct
+7.  C 			- Correct
+8.  D 			- Correct
+9.  F 			- Incorrect (D and F are correct)
+10. C 			- Incorrect (D is the correct answer)
+11. H 			- Correct
+12. C 			- Correct
+13. B, D 		- Incorrect (B and E are correct)
+14. G 			- Incorrect (E is the correct answer)
+15. B 			- Incorrect (D is the correct answer)
+16. C, D 		- Correct
+
+(11/16 = 68.5% => passing but not encouraging)
+
+
+
+
