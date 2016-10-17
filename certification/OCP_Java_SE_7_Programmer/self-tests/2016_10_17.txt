@@ -94,18 +94,20 @@ Self Test - Chapter 6 (page 364)
 
 Self Test - Chapter 7 (page 406)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
+1. B 		- Incorrect (B and F are the correct answers)
+2. D, E		- Incorrect (C, D, and E are the correct answers)
+3. E 		- Correct
+4. C 		- Incorrect (E is the correct answer)
+5. G, D 	- Incorrect (C, D, And G are the correct answers)
+6. B, D 	- Incorrect (B, D, and F are the correct answers)
+7. E 		- Correct
+8. G 		- Correct
+9. A 		- Incorrect (A and D are the correct answers)
+10. D 		- Correct
+11. A 		- Correct
+12. F 		- Correct
+
+(6/12 = 50% ==> faliling)
 
 
 
