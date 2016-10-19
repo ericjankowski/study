@@ -109,19 +109,21 @@ Self Test - Chapter 7 (page 406)
 
 Self Test - Chapter 8 (page 466)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
+1.  B				- Incorrect (E is the correct answer)
+2.  A, B, C, D, E	- Incorrect (A, C, D, and E are the correct answers)
+3.  E				- Incorrect (B is the correct answer)
+4.  B 				- Correct
+5.  D 				- Correct
+6.  
+7.  E 				- Incorrect (C is the correct answer)
+8.  A, C 			- Incorrect (C and E are the correct answers)
+9.  D, F 			- Correct
+10. C 				- Correct
+11. B, F, G 		- Incorrect (D, F, and G are the correct answers)
+12. B 				- Correct
+13. F 				- Correct
+
+(6/12 =  50% => failing)
 
 
 

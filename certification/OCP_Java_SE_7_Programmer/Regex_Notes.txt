@@ -1,0 +1,18 @@
+Regex Notes
+
+\d - A digit (0-9)
+\D - A non-digit (anything but 0-9)
+
+\s - A whitespace character (e.g. space, \t, \n, \f, \r)
+\S - A non-whitespace character
+
+\w - A word character (letters (a-z and A-Z), digits, or the underscore)
+\W - A non-word character
+
+\b - A word boundary (ends of the string and between \w and \W characters)
+\B - A non-word boundary (between two \w's or two \W's) 
+
+* - Zero or more occurrences
+? - Zero or one occurrence
+
+[] - Specifies a range - [abc] - [a-f] - [a-zA-Z]

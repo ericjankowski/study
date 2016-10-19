@@ -121,3 +121,7 @@ String s = "0123456789";
 System.out.println(s.substring(5)); 
 System.out.println(s.substring(5,7));
 
+
+
+NumberFormat rounds decimal values to specified precision.  It doesn't truncate.
+
