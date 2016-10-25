@@ -1,0 +1,13 @@
+I/O Notes
+
+Classes
+	- File - "an abstract representation of the file and directory pathnames"
+	- FileReader - used to read character files
+	- BufferedReader - used to make lower-level Reader classes like FileReader more efficient and easier to use
+	- FileWriter
+	- BufferedWriter
+	- PrintWriter
+	- Console
+
+
+

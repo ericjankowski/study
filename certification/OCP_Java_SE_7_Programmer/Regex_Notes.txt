@@ -14,5 +14,6 @@ Regex Notes
 
 * - Zero or more occurrences
 ? - Zero or one occurrence
++ - One or more occurrences
 
 [] - Specifies a range - [abc] - [a-f] - [a-zA-Z]
