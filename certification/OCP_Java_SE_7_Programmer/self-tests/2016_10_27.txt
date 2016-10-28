@@ -126,21 +126,23 @@ Self Test - Chapter 8 (page 466)
 Self Test - Chapter 9 (pate 530)
 
 1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
+2. C 			Incorrect (A and B are correct answers)
+3. C 			Incorrect (E is the correct answer)
+4. B 			Incorrect (D is the correct answer)
+5. A, B, C 		Incorrect (A and B are the correct answers)
+6. E, F 		Correct
+7. D 			Incorrect (A is the correct answer)
+8. E 			Correct
+9. A, B 		Incorrect (B is the correct answer)
+10. A, C 		Incorrect (A, B, and D are the correct answers)
+11. B, C, E 	Correct
+12. B, C 		Correct
+13. E 			Correct
+14. B, E 		Incorrect (B is the correct answer)
+15. B 			Incorrect (C is the correct answer)
+16. A 			Correct
+
+6/15 = 40% --> Well, they can't all be winners, now can they.  This needs more attention. 
 
 
 

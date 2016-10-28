@@ -10,4 +10,30 @@ Classes
 	- Console
 
 
+NIO.2 Classes
+	- Files (static methods)
+	- Path (interface)
+	- Paths (static methods)
+
+
+FileSystems
+DirectoryStream
+FileVisitor
+	SimpleFileVisitor<Path>
+FileVisitResult
+BasicFileAttributes
+PathMatcher (interface)
+WatchService (interface)
+WatchKey
+StandardWatchEventsKinds
+
+
+
+	
+
+
+
+
+
+
 
