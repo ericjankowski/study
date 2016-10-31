@@ -144,19 +144,20 @@ Self Test - Chapter 9 (pate 530)
 
 Self Test - Chapter 10 (pate 566)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
+1.  C 			Correct
+2.  B 			Correct
+3.  B 			Incorrect (F is the correct answer)
+4.  D 			Correct
+5.  B 			Correct
+6.  C, F 		Correct
+7.  A 			Correct
+8.  F 			Incorrect (B is the correct answer)
+9.  A, C 		Correct
+10. B, C 		Correct
+11. C 			Correct
+12. C 			Correct
 
+(10/12 = 83% => passing)
 
 
 

@@ -1,0 +1,6 @@
+Design Patterns List
+
+Data Access Object (DAO) Pattern
+Double Checked Locked Pattern
+Factory Method Pattern
+Singleton Pattern
