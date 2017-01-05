@@ -159,23 +159,24 @@ Self Test - Chapter 10 (pate 566)
 
 Self Test - Chapter 11 (page 667)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
+1.  B				Correct
+2.  B, D			Correct
+3.  C 				Incorrect (E is the correct answer)
+4.  C, D 			Correct
+5.  B, D, E, G 		Incorrect (B, G, and E are the correct answers)
+6.  C  				Incorrect (B is the correct answer)
+7.  D, E  			Incorrect (D is the correct answer)
+8.  A, B, F  		Incorrect (B, E, and F are the correct answers)
+9.  B  				Correct
+10. A, B, C, D, F 	Correct
+11. A, D  			Correct
+12. B, F  			Correct
+13. A, B  			Incorrect (A is the correct answer)
+14. B  				Correct
+15. D  				Incorrect (G is the correct answer)
+16. C, G 			Incorrect (D and G are the correct answers)
 
+50% FML
 
 
 
