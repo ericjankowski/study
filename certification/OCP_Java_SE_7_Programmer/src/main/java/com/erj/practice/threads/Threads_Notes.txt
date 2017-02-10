@@ -1,0 +1,32 @@
+Thread States
+
+1.  New
+		- instance of Thread created, but not started
+2.  Runnable
+		- start() method has been called
+3.  Running
+		- the Thread instance is the current thread of execution, the "currently executing process"
+4.  Waiting/blocked/blocking
+		- still alive, but not currently eligible to run
+		- not Runnable, but might be later
+		- Blocked: waiting for a resource
+		- Sleeping: directly put itself to sleep for some period of time
+		- Waiting:  waiting for notification from another thread
+5.  Dead
+		- a Thread is considered Dead when its run() method completes
+		- Runtime Exception (probably IllegalThreadStateException) gets thrown if you call start() 
+		  on a dead thread.
+
+One thread does not tell another thread to block (or stop).  The static Thread methods sleep() 
+and yield() always refer to the current thread of execution.
+
+Don't use the deprecated Thread methods:
+	suspend()
+	resume()
+	stop()
+	
+Thread priorities
+	Three constants
+		Thread.MIN_PRIORITY = 1
+		Thread.NORM_PRIORITY = 5
+		Thread.MAX_PRIORITY = 10

@@ -193,20 +193,22 @@ Self Test - Chapter 12 (page 704)
 
 Self Test - Chapter 13 (page 769)
 
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
-11.
-12.
-13.
-14.
-15.
-16.
-17. 
+1.  C 		- Correct
+2.  D 		- Correct
+3.  E 		- Incorrect (D is the correct answer)
+4.  B, F 	- Correct
+5.  B 		- Incorrect (D is the correct answer)
+6.  A, B 	- Incorrect (A is the correct answer)
+7.  A, B, D - Incorrect (A and D are the correct answers)
+8.  E 		- Correct
+9.  F 		- Incorrect (G is the correct answer)
+10. A 		- Incorrect (B is the correct answer)
+11. A, F, H - Correct
+12. G 		- Incorrect (A, C, D, E, and F are the correct answers)
+13. A, D, E - Incorrect (C and D are the correct answers)
+14. B, D 	- Incorrect (A is the correct answer)
+15. F 		- Correct
+16. C, E 	- Incorrect (F is the correct answer)
+17. C, E	- Correct
+
+(7/17 = 41% - What am I doing with my life?)
