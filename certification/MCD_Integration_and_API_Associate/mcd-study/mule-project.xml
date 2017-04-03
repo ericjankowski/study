@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.server.3.8.3.ee" schemaVersion="5.3.0.0">
+    <name>mcd-study</name>
+    <description>
+    	Experiments in Mule and the Anypoint Platform tools in pursuit of the MCD Integration and API Associate certification
+    </description>
+</mule-project>
