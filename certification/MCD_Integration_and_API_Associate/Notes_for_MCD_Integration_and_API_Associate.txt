@@ -1,0 +1,99 @@
+Notes for MuleSoft Certified Developer - Integration and API Associate
+
+02 - The Basics
+
+Vocabulary:
+- Messages
+- Message Source
+- Message Processors
+- Flows
+- DataMapper
+- DataSense
+- Batch module
+
+Protocols:
+- AMQP
+- FTP
+- HTTP
+- HTTPS
+- SMTP
+
+Mule applications are written in XML.  Java and Spring under the hood.
+
+Mule Message contains:
+1.  Inbound Properties - set from the message source
+2.  Outbound Properties - added by message processors
+3.  Payload - the core of the message
+4.  Attachments - ancillary info to the message
+
+Terminology:
+- Connector - a Mule-specific connection to an external resource of any kind
+- Endpoint - a flow-level element that is configured to receive and/or send messages from and/or to external resources
+- Transports - provide connectivity to a data source or message channel by implementing one of a variety protocols
+
+Inbound Properties
+- Set by the message source
+- Read-only access
+- Persist throughout the flow
+
+Outbound Properties
+- Added by message processors
+- Read/Write access
+- Can set, remove, copy
+
+Payload
+- The core of the message
+- Contains primary info to be processed
+- Contains a Java Object
+
+Attachments
+- Ancillary infor to the message
+- Smiliar to an email attachment
+
+Context objects
+- server - operating system that the message processor is running in
+- mule - the mule instance that the application is running in
+- application - the user application that the current flow is deployed in
+- message - the mule message that the message processor is processing
+
+Variables
+- flowVars
+- sessionVars
+- recordVars
+
+03 - Consuming Web Services
+
+Vocabulary
+  - REST
+  - SOAP
+  - RAML
+
+SOAP - Simple Object Access Protocol
+	- WSDL (Web Service Description Language)
+	- XML - (SOAP Envelope uses XML)
+	- SOAP request is sent as the body of an HTTP POST request
+
+REST
+	Resources are manipulated using a fixed set of operations
+		- GET retrieves the current state of a resource in some representation (usually JSON or XML)
+		- POST creates a new resource
+		- PUT transfers a new state onto a resource
+		- DELETE deletes a resource
+
+RAML - RESTful API Modeling Language
+  - raml.org
+  - Other approaches
+  	 - Hand Coding
+  	 - Swagger
+  	 - Blueprint (apiary)
+
+Security
+	- OAuth
+	- SAML
+	- JWT (JSON web tokens)
+
+
+
+
+
+
