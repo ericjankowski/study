@@ -90,7 +90,7 @@ RAML - RESTful API Modeling Language
 Security
 	- OAuth
 	- SAML
-	- JWT (JSON web tokens)
+	- JWT (JSON web tokens) test
 
 
 
