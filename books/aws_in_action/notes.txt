@@ -3,3 +3,6 @@ Helpful commands
 cat /proc/cpuinfo
 
 free -m
+
+sudo yum install httpd -y
+sudo service httpd start
