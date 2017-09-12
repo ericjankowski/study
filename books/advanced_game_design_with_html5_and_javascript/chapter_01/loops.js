@@ -28,6 +28,49 @@ planets.forEach((planet) =>{
 
 console.log("----------");
 
-let numbers = [1, 2, 3, 4, 5];
-let squared = [for (let x of numbers) x * x];
-console.log(squared);
+//let numbers = [1, 2, 3, 4, 5];
+//var doubled = [for (i of numbers) i * 2];
+//console.log(doubled);
+//let squared = [for (x of numbers) x * x];
+//console.log(squared);
+
+let room = {
+	door: "open",
+	light: "on",
+	contents: ["carpet", "mouse", "katana"]
+};
+
+console.log(Object.keys(room));
+console.log("----------");
+Object.keys(room).forEach(key => {
+	let value = room[key];
+	console.log("key: " + key + ", value: " + value);
+});
+
+console.log("----------");
+
+let roomProperties = Object.keys(room);
+for (let key of roomProperties){
+	let value = room[key];
+	console.log("key: " + key + ", value: " + value);
+}
+
+console.log("----------");
+
+let instruments = ["guitsr", "piano", "tabla", "ocarina", "tabla"];
+instruments.some(find);
+function find(instrument){
+	if(instrument === "tabla"){
+		console.log("Table found!");
+		return true;
+	} else {
+		console.log("No tabla found...");
+		return false;
+	}
+}
+
+let found = instruments.find(x => x === "tabla");
+console.log(found);
+
+let index = instruments.findIndex(x => x === "tabla");
+console.log(index);
