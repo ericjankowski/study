@@ -1,0 +1,9 @@
+Variables: let, const, and var
+
+JavaScript engines:
+- V8
+- SpiderMonkey
+
+jsperf.com for performance experiments
+
+store.js and localforage.js for saving game data
