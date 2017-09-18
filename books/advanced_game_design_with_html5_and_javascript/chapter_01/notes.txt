@@ -7,3 +7,16 @@ JavaScript engines:
 jsperf.com for performance experiments
 
 store.js and localforage.js for saving game data
+
+Minification
+ - Google's Closure Compiler
+ - UglifyJS
+ - YUI Compressor
+ - Minify-on-save
+ 	- Sublime text
+ 	- Brackets
+ 	- Atom
+ 	- Light Table
+ - Grunt
+ - Gulp
+ - Yeoman
