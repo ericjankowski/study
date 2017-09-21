@@ -8,8 +8,6 @@ let ctx = canvas.getContext("2d");
 let basketballImage = new Image();
 basketballImage.addEventListener("load", loadHandler, false);
 basketballImage.src = "../images/basketball.png";
-basketballImage.style.width = "10%";
-basketballImage.style.height = "auto";
 
 function loadHandler(){
 	ctx.drawImage(basketballImage, 0, 0);
