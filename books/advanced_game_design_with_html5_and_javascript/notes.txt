@@ -1,0 +1,4 @@
+Use font.js for preloading fonts
+
+Use Texture Packer to create a texture atlas
+
