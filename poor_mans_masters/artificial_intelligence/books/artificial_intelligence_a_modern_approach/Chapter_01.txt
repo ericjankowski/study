@@ -1,5 +1,148 @@
-Chapter 01
-==========
+Chapter 01 - Introduction
+=========================
 
 Artificial Intelligence: A Modern Approach by Stuart Russell and Peter Norvig
+
+AI attempts to understand and build intelligent entities
+
+Subfields
+	- learning
+	- perception
+	- playing chess
+	- proving mathematical theorems
+	- writing poetry
+	- driving a car
+	- diagnosing diseases
+
+
+
+1.1 What is AI
+==============
+
+Thinking Humanly		Thinking Rationally
+
+Acting Humanly			Acting Rationally
+
+
+
+1.1.1 Acting humanly: The Turing Test approach
+----------------------------------------------
+
+Alan Turing, Turing Test
+
+In order to pass the Turing Test, a system would need:
+ - natural language processing
+ - knowledge representation
+ - automated reasoning
+ - machine learning
+
+ Additionally, to pass the "total Turing test," a system would need:
+  - computer vision
+  - robotics
+
+
+
+1.1.2 Thinking humanly: The cognitive modeling approach
+-------------------------------------------------------
+
+Cognitive Science - The inderdisciplinary field of cognitive science brings together computer models from AI and experimental techniques from psychology to construct precise and testable theories of the human mind.
+
+Computer vision is an example of a field in which cognitive science and artificial intelligence have pushed eachother to new achievement.
+
+
+
+1.1.3 Thinking rationally: The "laws of thought" approach
+---------------------------------------------------------
+
+ - Aristotle's syllogisms
+ - Logic
+ - Logicist tradition within the artificial intelligence field
+
+
+
+1.1.4 Acting rationally: The rational agent approach
+----------------------------------------------------
+
+Agents...
+  - operate autonomously
+  - perceive their environment
+  - persist over a prolonged time period
+  - adapt to change
+  - create and pursue goals
+
+ ...recoiling from a hot stove is a reflex action that is usually more successful than a slower action taken after careful deloberation.
+
+ ...achieving perfect rationality - always doing the right thing - is not feasible in complicated environments.  The computational demands are just too high.
+
+ Limited Rationality - acting appropriately when there is not enough time to do all the computations one might like
+
+
+
+1.2  The Foundations of Artificial Intelligence
+===============================================
+
+1.2.1 Philosophy
+----------------
+
+   - Can formal rules be used to draw valid conclusions?
+   - How does the mind arise from a physical brain?
+   - Where does knowledge come from?
+   - How does knowledge lead to action?
+
+   Aristotle - first to formulate a precise set of laws governing the rational part of the mind, syllogisms for proper reasoning
+
+   First "thinking machines" were mathematical calculators by DaVinci, Pascal, Leibniz
+
+   - Rationalism - emphasis on the power of reason to understand the world
+   - Dualism - part of the humand mind is outside of nature and exempt from physical laws
+   - Materialism - the brain's operation according to the laws of physics constitutes the mind - free will is simply how we perceive choice
+   - Empiricism - "Nothing is in the understanding, which was not first in the senses." - John Locke
+   - Induction - general rules are acquired by exposure to repeated associations...
+   - Logical Positivism and Observation Sentences - combines rationalism and empiricism
+   - Confirmation Theory - theory of mind as a computational process
+
+   Regression planning system, goal-based analysis
+
+
+
+1.2.2 Mathematics
+-----------------
+
+ - Logic - What are the formal rules to draw valid conclusions?
+ - Computation - What can be computed?
+ - Probability - How do we reason with uncertain information?
+
+First algorithm - Euclid's algorithm for computing greatest common divisors
+
+Godel's incompleteness theorem - some functions on the integers cannon be represented by an algorithm => not computable
+
+Tractability - A problem is called intractable if the time required to solve instances of the problem grows exponentially with the size of the instances.  It's a distinction between polynomial and exponential growth
+
+NP-Completeness
+
+Probability
+
+
+
+1.2.3 Economics
+---------------
+
+ - How should we make decisions so as to maximize payoff?
+ - How should we do this when others may not go along?
+ - How should we do this when the payof may be far in the future?
+
+Adam Smith
+
+Utility - preferred outcomes - "When McDonald's offers a hamburger for a dollar, they are asserting that they would prefer the dollar and hoping that customers will prefer the hambrger."
+
+
+
+
+
+
+
+
+
+
+
 
