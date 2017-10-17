@@ -1,0 +1,84 @@
+Keeping a Tidy Computer
+=======================
+
+Linux containers provide isolation for running programs.  Docker controls that isolation with the goals of reuse, resource efficiency, and system simplification.
+
+
+
+Chapter 1 - Welcome to Docker
+=============================
+
+This chapter covers
+- What Docker is
+- An introduction to containers
+- How Docker addresses software problems that most people tolerate
+- When, where, and why you should use Docker
+- Example: "Hello, World"
+
+Creating build, test, and deployment pipelines is simplified using Docker
+
+Docker was launched in March 2013
+
+Docker is a tool that helps solve common problems like installing, removing, upgrading, distributing, trusting, and managing software.
+
+
+
+1.1 What is Docker?
+===================
+Docker is a command-line program, a background daemon, and a set of remote services that take a logistical approach to solving common software problems and simplifying your experience installing, running, publishing, and removing software.
+
+1.1.1 Containers
+----------------
+
+1.1.2 Containers are not virtualization
+---------------------------------------
+
+Docker is not a virtualization technology.  Instead, it helps you use the container technology already buit into your operating system.
+
+1.1.3 Running software in containers for isolation
+--------------------------------------------------
+
+Docker uses Linux namespaces and cgroups
+
+Docker containers run as child processes of the Docker daemon
+
+Isolation with respect to eight different aspects:
+ 1. PID namespace - process identifiers and capabilities
+ 2. UTS namespace - host and domain name
+ 3. MNT namespace - file system access and structure
+ 4. IPC namespace - process communication over shared memory
+ 5. NET namespace - network access and structure
+ 6. USR namespace - user names and identifiers
+ 7. chroot() - controls the location of the file system root
+ 8. cgroups - resource protection
+
+ 1.2 What problems does Docker solve?
+ ------------------------------------
+
+ Installing software is at best incosistent and overcomplicated.
+
+ - What happens if one application needs an upgraded dependency but the other does not?
+ - What happens when you remove an application? Is it really gone?
+ - Can you remove old dependencies?
+ - Can you remember all the changes you had to make to install the software you now want to remove?
+
+ 1.2.1 Getting organized
+ -----------------------
+
+ 1.2.2 Improving portability
+ ---------------------------
+
+ 1.2.3 Protecting your computer
+ ------------------------------
+
+ 1.3 Why is Docker important?
+ ----------------------------
+
+ Docker provides abstraction
+ Docker is the standard container utility
+
+ 1.4 Where and when to use Docker
+ --------------------------------
+
+ 1.5 Example: "Hello, World"
+ ---------------------------
