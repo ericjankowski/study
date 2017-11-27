@@ -108,6 +108,21 @@ Persuasion techniques
 - Reciprocate
 
 
+Week Five - Discovering Lurking Problems
+----------------------------------------
+
+The people who perform the work need to be part of the solution.
+
+Sustainable pace, elmininate multitasking
+
+Prioritization is a business decision, not a technical one.
+
+Process problems
+- Look for artificial constraints
+- Listen for pointers to the underlying problem - do root cause analysis
+- Look for solutions that you can implement
+- Fix the problem, don't affix blame
+
 
 
 
