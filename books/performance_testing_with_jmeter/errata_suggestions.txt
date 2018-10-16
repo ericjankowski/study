@@ -1,0 +1,7 @@
+Performance Testing w/ JMeter
+
+Errata suggestions:
+
+	Chapter 1
+		Page 13 - "...more on this in Chapter [x])" - should be "Chapter 6)"
+		Page 14 - "...ease the learning curve for early adapters." - should be "early adopters."

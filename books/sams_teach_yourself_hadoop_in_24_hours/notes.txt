@@ -1,0 +1,37 @@
+Sams Teach Yourself Hadoop in 24 Hours Notes
+
+Introducing Hadoop
+------------------
+
+Hadoop used in...
+- data warehousing
+- event processing
+- machine learning
+
+Relevant whitepapers
+- 2003 : "The Google File System"
+- 2004 : "MapReduce: Simplified Data Processing on Large Clusters"
+
+Initial creator - Doug Cutting
+
+Data locality 
+- processing data where it resides
+- Hadoop enables large datasets to be processed lcally on the nodes of a cluster using a shared nothing approach
+
+HDFS - Hadoop's storage subsystem
+YARN - Hadoop's process scheduling subsystem
+
+Hadoop ecosystem projects
+- Flume
+- Sqoop
+- Pig
+- Hive
+- Spark (maybe)
+
+Commercial Product Suites
+- Cloudera
+- MapR
+- Hortonworks
+- IBM
+- Pivotal
+- Teradata
