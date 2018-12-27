@@ -90,10 +90,208 @@ RAML - RESTful API Modeling Language
 Security
 	- OAuth
 	- SAML
-	- JWT (JSON web tokens) test
+	- JWT (JSON web tokens)
 
+Good API Design characteristics
+	- Have a clear purpose and functionality
+	- Be discoverable
+	- Be easy to use so developers can quickly become productive using it
 
+API Development Lifecycle
+	1.  Design
+	2.  Simulate
+	3.  Feedback
+	4.  Validation
+	5.  Build
+	6.  Test
+	7.  Version
+	8.  Secure
+	9.  Deploy and Register
+	10. Monitor
+	11. Analyze
+	12. Troubleshoot
+	13. Scale
+	14. Respond
 
+API Development Lifecycle
+	1.  Design - API Designer
+	2.  Simulate - Mocking Service, API Console
+	3.  Feedback - API Portal, Exchange
+	4.  Validation - API Notebook
+	--- Implementation ---
+	5.  Build - Anypoint Studio
+	6.  Test - MUnit
+	--- Deployment ---
+	7.  Version - API Manager
+	8.  Secure - API Manager
+	9.  Deploy and Register - Runtime Manager
+	10. Monitor - Runtime Manager
+	11. Analyze - API Analytics
+	12. Troubleshoot - 
+	13. Scale - API Manager
+	14. Respond
 
+http://champions.mulesoft.com
 
+System APIs
+Process APIs
+Experience APIs
 
+HTTP Verbs in REST
+	GET - Retreival
+	POST - Create new resource
+	DELETE - delete
+	PUT - Completely replace existing resource
+	PATCH - partially update a resource
+
+Tools for API Design
+	API Designer - A web-based IDE for building out RAML files
+	API Console - Provides views of all the resources and methods generated from our RAML
+	Mocking Service - Providing responses back based on our examples
+	API Portal - 
+	Exchange - 
+	API Notebook - Mock out use cases to show validation
+
+Tools for API implementation
+	Anypoint Studio
+	MUnit
+	API Manager 
+		- versioning management
+		- security and policy enforcement
+		- Scalability management
+	Runtime Manager
+		- monitoring capabilities
+		- deployment capabilities
+	API Analytics
+		- analytics
+
+Components of the Anypoint Platform
+	Anypoint Design Center
+		Anypoint Studio
+		API Designer
+		Connector DevKit
+	Anypoint Management Center
+		Runtime Manager
+		API Manager
+		Analytics
+	Anypoint Exchange
+	Mule Runtime Engine
+	Anypoint Connectors
+	Runtime Services
+	Hybrid Cloud
+
+Development Fundamentals Module 3
+---------------------------------
+
+Build using Anypoint Studio
+Test using Postman
+
+Mule runtime EE
+- 24/7 global support
+- Additional connectors
+- Visual debugging
+- DataWeave and DataSense
+- Batch module
+- Caching and transaction suport
+- Performance monitoring
+- Security module
+- Templates
+- Deployment and performance management
+
+MUnit is convered in the "Anypoint Platform Development: Advanced" course
+
+Building blocks
+	Message sources
+	Connector - a Mule-specific connection to an external resource of any kind
+	Endpoint - a flow-level element that is configured to receive and/or send messages from and/or to external resources
+	Global element - a reusable object that can be used by many endpoints
+
+Message processors
+	Connectors
+	Scopes
+	Components
+	Transformers
+	Filters
+	Flow control
+	Error handling
+
+APIkit
+	Open-source
+	router element for Mule apps
+	Proxy element for Mule apps
+	Mapping exception strategy
+
+Module 6
+--------
+
+Sub-Flows are called synchronously within the same thread as the flow that calls it.
+Sub-Flows inherit the processing and exception strategies of the flow that triggered its execution.
+
+Staged Event Driven Architecture (SEDA)
+- The architecture upon which Mule was built
+- Decouples receiving, processing, and dispatching phases
+- Supports higher levels of parallelism in specific stages of processing
+- Allows for more-specific tuning of areas within a flow's architecture
+
+Synchronous processing strategy
+- When a flow receives a message, all processing, including the processing of the response, is done in the same thread
+- Uses only the message source's thread pool
+- The flow's thread pool is elastic and will have one idle thread that is never used
+- Tuning for higher-throughput happens on the connector receiver's level
+- Threads are blocking, preventing reuse by other inbound requests until entire flow has completed processing
+
+Non-blocking processing strategy
+- Useful if a flow contains an outbound HTTP endpoint
+	- Like in a proxy application
+- One thread is used to make the outbound request and a different thread is used to handle the response
+- Threads are released and reused instead of waiting for a response, enabling reuse by other inbound requests
+- Fosters better resource utilization
+- Must be explicitly set for a flow
+	- Usually set as the default processing strategy for the app
+- Available in Mule 3.7+
+
+Queued-asynchronous processing strategy
+- Decouples and uses all three thread pools
+- Uses queues, whose threads drop messages off for the subsequent pool's thread to pickup
+- Pools, queues, and behaviors of this strategy are configurable
+- By default, the flow thread pool has 16 threads
+
+Subflows
+- Always run shynchronously in the same thread
+
+Flows
+- Flows without message sources are sometimes called private flows
+
+Flows contain 3 thread pools
+- Receiving :: message source's threads
+- Flow processing :: message processor's threads
+- Dispatching :: outbound endpoint's threads
+
+Creating flows and subflows
+- Use Flow scope to create a new flow or drag any message processor to the canvas
+- Use Sub flow scope to create subflows
+- Use Flow Reference component to pass messages to the other flows or subflows
+- Flow variables persist through all flows unless the message crosses a transport boundary
+
+Setting the flow processing strategy
+- The flow processing strategy is automatically set
+- It can be changed in the flow's properties view
+- Thi sis usually done when a custom queued-asynchronous profile has been created for tuning application performance
+
+Using VM endpoints in flows
+---------------------------
+
+The Java Virtual Machine (VM) transport
+- The JVM transport can be used for intra-JVM communication between Mule flows
+- Each app in a Mule instance has its own, unique set of VM endpoints
+- The VM transport can only handle communications within an app or between apps in the same domain
+- This transport by default uses in-memory queues but can optionally be configured to use persistent queues (VM file persistency does not work on clusters)
+
+Using the VM transport
+- Before Mule 3, the VM transport was needed to pass a message from one flow to another
+- In Mule 3, Flow Reference was added to let flows directly reference one another without a transport in the middle.  This obviates the need for the VM transport in many cases
+- VM transport is now mostly used to:
+	- Achieve higher levels of parallelism in specific stages of processing
+	- Allow for more-specific tuning of areas within a flow's architecture
+	- Call flows in other applications that are in the same domain
+- Using VMs to tune application performance is covered in the Anypoint Platform Development: Advanced course
