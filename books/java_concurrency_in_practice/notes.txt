@@ -1,0 +1,1 @@
+how programs deal with cancellation and shutdown is often one of the factors that separates truly robust concurrent applications from those that merely work
