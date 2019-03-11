@@ -1,0 +1,4 @@
+Typos
+
+Table 1-7 AI and ML Explosive Growth
+  2106 should probably be 2016
