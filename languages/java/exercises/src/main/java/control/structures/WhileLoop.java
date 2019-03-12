@@ -1,4 +1,4 @@
-package exercises;
+package control.structures;
 
 public class WhileLoop {
 	public static void main(String[] args) {

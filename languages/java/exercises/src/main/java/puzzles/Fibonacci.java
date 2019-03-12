@@ -1,4 +1,4 @@
-package exercises;
+package puzzles;
 
 public class Fibonacci {
 	//Question taken from 
