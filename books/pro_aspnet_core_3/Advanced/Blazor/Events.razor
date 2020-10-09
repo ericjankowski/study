@@ -1,0 +1,18 @@
+﻿@for (int i = 0; i < ElementCount; i++)
+{
+    int local = i;
+    <div class="m-2 p-2 border">
+        <button class="btn btn-primary" @onclick="@(() => IncrementCounter(local))">
+            Increment Counter #@(i + 1)
+        </button>
+        <span class="p-2">Counter Value: @GetCounter(i)</span>
+    </div>
+}
+@code {
+    public int ElementCount { get; set; } = 4;
+    public Dictionary<int, int> Counters { get; } = new Dictionary<int, int>();
+    public int GetCounter(int index) =>
+        Counters.ContainsKey(index) ? Counters[index] : 0;
+    public void IncrementCounter(int index) =>
+        Counters[index] = GetCounter(index) + 1;
+}
